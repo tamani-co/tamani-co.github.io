@@ -1,0 +1,80 @@
+button {
+	border:0;
+	border-radius: 8px;
+	color: #ffffff;
+	display: flex;
+	font-size: 25px;
+	padding: 0px;
+	cursor: pointer;
+	transition: .3s;
+}
+
+button span {
+	background-color: #08080a;
+	padding: 10px 24px;
+	border-radius: 8px;
+	transition: .3s;
+}
+
+button:hover span {
+	background: none;
+	color: #08080a;
+}
+
+button:active {
+	transform: scale(0.9);
+}
+
+menu {
+    display: flex;
+    justify-content: center; 
+    gap: 10px;
+}
+
+table {
+	border-radius: 20px;
+	padding: 1px;
+}
+
+@keyframes show {
+	from {
+		opacity: 0; scale: 10%
+	}
+	
+	to {
+		opacity: 1; scale: 100%;
+	}
+}
+
+img {
+	border-radius: 20px;
+	view-timeline-name: --reveal;
+	
+	animation-name: show;
+	animation-fill-mode: both;
+
+	animation-timeline: --reveal;
+	animation-range: entry 25% cover 50%;
+}
+
+.pulse-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+    animation: pulse 1.5s infinite; /* Aplica la animación */
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1); /* Estado inicial */
+    }
+    50% {
+        transform: scale(1.1); /* Aumenta el tamaño */
+    }
+    100% {
+        transform: scale(1); /* Vuelve al tamaño original */
+    }
+}
